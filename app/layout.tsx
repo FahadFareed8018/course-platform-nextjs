@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Course Platform",
   },
   description: "Discover and enroll in high-quality online courses. Learn from expert instructors and advance your career.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://course-platform-nextjs-psi.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",

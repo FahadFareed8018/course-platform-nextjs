@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllCourseIds } from '@/lib/courseData'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://course-platform-nextjs-psi.vercel.app'
   const courseIds = await getAllCourseIds()
   
   // Static pages

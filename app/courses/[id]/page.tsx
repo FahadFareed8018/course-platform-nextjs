@@ -23,9 +23,9 @@ export async function generateMetadata({
   const title = `${course.name} | ${course.provider.name}`;
   const description = course.description;
   const imageUrl = course.imageUrl.startsWith("/")
-    ? `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}${course.imageUrl}`
+    ? `${process.env.NEXT_PUBLIC_BASE_URL || "https://course-platform-nextjs-psi.vercel.app"}${course.imageUrl}`
     : course.imageUrl;
-  const courseUrl = `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/courses/${course.id}`;
+  const courseUrl = `${process.env.NEXT_PUBLIC_BASE_URL || "https://course-platform-nextjs-psi.vercel.app"}/courses/${course.id}`;
 
   return {
     title,
@@ -98,7 +98,7 @@ export default async function CourseDetailPage({
     notFound();
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://course-platform-nextjs-psi.vercel.app";
   const imageUrl = course.imageUrl.startsWith("/")
     ? `${baseUrl}${course.imageUrl}`
     : course.imageUrl;
